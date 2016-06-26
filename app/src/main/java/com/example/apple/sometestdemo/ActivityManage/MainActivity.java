@@ -30,6 +30,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.main_layout);
         new NaveBarManger(this, null, NaveBarManger.navType.normal,null);
         init();
+        System.out.println("");
     }
 
 

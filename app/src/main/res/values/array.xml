@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="main_array">
+        <item>数据存储</item>
+        <item>自定义控件</item>
+        <item>动画</item>
+        <item>框架库</item>
+        <item>网络加载</item>
+    </array>
+
+    <array name="dataSorge">
+        <item>sharePreferences存储</item>
+        <item>文件存储</item>
+        <item>数据存储数据</item>
+        <item>contentProvider存储</item>
+    </array>
+</resources>

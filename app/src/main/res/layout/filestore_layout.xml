@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAD2">
+
+    <include
+        layout="@layout/navbar_layout"
+        android:id="@id/navBar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navBar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="50dp">
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="显示文件路径"
+                android:background="#CD6839"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/pathread"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pathread"
+                android:layout_marginTop="10dp"
+                android:text="点击上面按钮显示..."
+                android:gravity="center"
+                android:textSize="22dp"
+                android:id="@+id/tv_read"
+              />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="输入值："
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/output"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/output"
+                android:id="@+id/output_btn"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="输出值："
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/input"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/input"
+                android:id="@+id/input_btn"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="#EE7942"
+                android:textSize="17dp"
+                android:textColor="#ffffff"
+                android:text="存入文件"
+                android:id="@+id/goBtn"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="#EE7942"
+                android:textColor="#ffffff"
+                android:text="读出文件"
+                android:textSize="17dp"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/outBtn"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

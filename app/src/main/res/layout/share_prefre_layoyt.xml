@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/pic_share">
+
+    <include
+        layout="@layout/navbar_layout"
+        android:id="@+id/title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="存入值："
+                android:textSize="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_enter"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_enter"
+                android:id="@+id/enter_num"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:text="取出值："
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_out"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_out"
+                android:id="@+id/out_num"
+                android:textSize="17dp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="#EE7942"
+                android:textSize="17dp"
+                android:textColor="#ffffff"
+                android:text="存储"
+                android:id="@+id/goBtn"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="#EE7942"
+                android:textColor="#ffffff"
+                android:text="取值"
+                android:textSize="17dp"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/outBtn"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    
+
+</RelativeLayout>

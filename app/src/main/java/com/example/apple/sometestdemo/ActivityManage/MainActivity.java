@@ -31,6 +31,7 @@ public class MainActivity extends BaseActivity {
         new NaveBarManger(this, null, NaveBarManger.navType.normal,null);
         init();
         System.out.println("");
+        system
     }
 
 

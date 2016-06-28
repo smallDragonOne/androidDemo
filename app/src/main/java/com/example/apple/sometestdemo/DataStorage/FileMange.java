@@ -1,22 +1,15 @@
-package com.example.apple.sometestdemo.Utils;
+package com.example.apple.sometestdemo.DataStorage;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.AvoidXfermode;
 import android.os.Environment;
-import android.util.Xml;
 import android.widget.Toast;
 
-import com.example.apple.sometestdemo.Myaplication;
-
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
 
 /**
  * Created by zj on 16/6/25.

@@ -1,6 +1,5 @@
 package com.example.apple.sometestdemo.ActivityManage;
 
-import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -10,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.apple.sometestdemo.R;
-import com.example.apple.sometestdemo.Utils.MySqliteHandle;
+import com.example.apple.sometestdemo.DataStorage.MySqliteHandle;
 import com.example.apple.sometestdemo.View.NaveBarManger;
 
 /**

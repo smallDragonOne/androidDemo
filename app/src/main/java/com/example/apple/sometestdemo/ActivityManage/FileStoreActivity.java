@@ -1,7 +1,5 @@
 package com.example.apple.sometestdemo.ActivityManage;
 
-import android.app.Activity;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,10 +7,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.apple.sometestdemo.R;
-import com.example.apple.sometestdemo.Utils.FileMange;
+import com.example.apple.sometestdemo.DataStorage.FileMange;
 import com.example.apple.sometestdemo.View.NaveBarManger;
-
-import java.io.FileInputStream;
 
 /**
  * Created by zj on 16/6/24.

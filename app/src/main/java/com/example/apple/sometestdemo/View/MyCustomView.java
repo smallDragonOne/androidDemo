@@ -13,7 +13,6 @@ import android.view.View;
 import com.example.apple.sometestdemo.R;
 import com.example.apple.sometestdemo.Utils.Mylog;
 
-import org.w3c.dom.Attr;
 
 /**
  * Created by apple on 16/6/27.

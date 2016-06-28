@@ -6,7 +6,8 @@ import android.os.Bundle;
 import com.example.apple.sometestdemo.Myaplication;
 
 /**
- * Created by apple on 16/6/23.
+ * 公共基类activity
+ * Created by zj on 16/6/23.
  */
 public class BaseActivity extends Activity {
 

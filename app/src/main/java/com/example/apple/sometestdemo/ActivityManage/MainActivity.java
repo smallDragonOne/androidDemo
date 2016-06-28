@@ -15,7 +15,8 @@ import java.util.List;
 import com.example.apple.sometestdemo.Bean.mainBean;
 
 /**
- * Created by apple on 16/6/23.
+ * 主页
+ * Created by zj on 16/6/23.
  */
 public class MainActivity extends BaseActivity {
 
@@ -64,14 +65,28 @@ public class MainActivity extends BaseActivity {
             @Override
             protected void convertToView(ViewHolder holder, mainBean bean) {
                 holder.setText(R.id.titles ,bean.getTitle()).setImage(R.id.image,bean.getImage());
-                if (holder.getMposition() == 0){
-                    holder.setClick(R.id.list_item, new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity.this , DataStorgeActivity.class);
-                            startActivity(intent);
-                        }
-                    });
+                switch (holder.getMposition()){
+                    case 0:
+                        holder.setClick(R.id.list_item, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(MainActivity.this , DataStorgeActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                        break;
+                    case 1:
+                        holder.setClick(R.id.list_item, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(MainActivity.this , CustomControl.class);
+                                startActivity(intent);
+                            }
+                        });
+                        break;
+                    default:
+                        break;
+
                 }
             }
         };

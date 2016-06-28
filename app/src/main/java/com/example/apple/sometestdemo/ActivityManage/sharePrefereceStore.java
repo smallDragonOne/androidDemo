@@ -18,9 +18,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by apple on 16/6/24.
+ * 持久化存储
+ * Created by zj on 16/6/24.
  */
-public class sharePrefereceStore extends BaseActivity implements View.OnClickListener {
+public class SharePrefereceStore extends BaseActivity implements View.OnClickListener {
 
     private EditText editText;
     private TextView tv_outnum;

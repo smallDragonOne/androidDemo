@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by apple on 16/6/24.
+ * Created by zj on 16/6/24.
  * 数据存储
  */
 public class DataStorgeActivity extends BaseActivity {
@@ -74,7 +74,7 @@ public class DataStorgeActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        intent = new Intent(DataStorgeActivity.this , sharePrefereceStore.class);
+                        intent = new Intent(DataStorgeActivity.this , SharePrefereceStore.class);
                         startActivity(intent);
                         break;
                     case 1:
@@ -82,6 +82,8 @@ public class DataStorgeActivity extends BaseActivity {
                         startActivity(intent);
                         break;
                     case 2:
+                        Intent intent = new Intent(DataStorgeActivity.this , SqliteActivity.class);
+                        startActivity(intent);
                         break;
                     case 3:
                         break;

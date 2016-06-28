@@ -18,20 +18,42 @@
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginTop="50dp">
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:text="显示文件路径"
-                android:background="#CD6839"
-                android:gravity="center"
-                android:textSize="40dp"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/pathread"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/path_btn"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="默认文件路径"
+                    android:background="#CD6839"
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:layout_weight="1"
+                    android:id="@+id/pathread"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:background="#CD6839"
+                    android:layout_weight="1"
+                    android:text="SD文件路径"
+                    android:gravity="center"
+                    android:id="@+id/sd_path_btn"
+                    />
+            </LinearLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/pathread"
+                android:layout_below="@id/path_btn"
                 android:layout_marginTop="10dp"
                 android:text="点击上面按钮显示..."
                 android:gravity="center"
@@ -56,6 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
+                android:gravity="center"
                 android:layout_toRightOf="@id/output"
                 android:id="@+id/output_btn"/>
         </RelativeLayout>
@@ -76,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
+                android:gravity="center"
                 android:layout_toRightOf="@id/input"
                 android:id="@+id/input_btn"/>
         </RelativeLayout>
@@ -104,6 +128,28 @@
                 android:textSize="17dp"
                 android:layout_marginLeft="40dp"
                 android:id="@+id/outBtn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SD写入"
+                android:textColor="#ffffff"
+                android:background="#EE7942"
+                android:id="@+id/sd_btn_write"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SD取出"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="40dp"
+                android:background="#EE7942"
+                android:id="@+id/sd_btn_read"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

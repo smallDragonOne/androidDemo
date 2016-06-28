@@ -15,7 +15,7 @@ import com.example.apple.sometestdemo.View.NaveBarManger;
 import java.io.FileInputStream;
 
 /**
- * Created by apple on 16/6/24.
+ * Created by zj on 16/6/24.
  * 文件存储
  */
 public class FileStoreActivity extends BaseActivity implements View.OnClickListener{
@@ -26,6 +26,9 @@ public class FileStoreActivity extends BaseActivity implements View.OnClickListe
     private TextView tv_input;
     private Button  writeBtn;
     private Button  readBtn;
+    private Button  sdWirteBtn;
+    private Button  sdReadBtn;
+    private TextView tv_sdPathBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +58,9 @@ public class FileStoreActivity extends BaseActivity implements View.OnClickListe
         tv_input = (TextView)findViewById(R.id.input_btn);
         writeBtn = (Button)findViewById(R.id.goBtn);
         readBtn = (Button)findViewById(R.id.outBtn);
+        sdWirteBtn = (Button)findViewById(R.id.sd_btn_write);
+        sdReadBtn = (Button)findViewById(R.id.sd_btn_read);
+        tv_sdPathBtn = (TextView)findViewById(R.id.sd_path_btn);
     }
 
     /**
@@ -64,6 +70,9 @@ public class FileStoreActivity extends BaseActivity implements View.OnClickListe
         tv_filepath.setOnClickListener(this);
         writeBtn.setOnClickListener(this);
         readBtn.setOnClickListener(this);
+        sdWirteBtn.setOnClickListener(this);
+        sdReadBtn.setOnClickListener(this);
+        tv_sdPathBtn.setOnClickListener(this);
     }
 
     @Override
@@ -71,7 +80,7 @@ public class FileStoreActivity extends BaseActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.goBtn:
                 try{
-                    FileMange.writeFile(this,"fileName",editText.getText().toString().trim());
+                    FileMange.writeFile(this,"fileName",editText.getText().toString().trim(),MODE_PRIVATE);
                 }
                 catch (Exception e){
                     e.printStackTrace();
@@ -87,6 +96,15 @@ public class FileStoreActivity extends BaseActivity implements View.OnClickListe
                 break;
             case R.id.pathread:
                 tv_visible.setText(FileMange.getFilePath(this,"fileName",MODE_PRIVATE));
+                break;
+            case R.id.sd_btn_write:
+                FileMange.saveToSdCard(this,"sdFile.txt",editText.getText().toString().trim(),false);
+                break;
+            case R.id.sd_btn_read:
+                tv_input.setText(FileMange.getSdCardFile(this, "sdFile.txt"));
+                break;
+            case R.id.sd_path_btn:
+                tv_visible.setText(FileMange.getSdCardFilePath(this));
                 break;
             default:
                 break;

@@ -9,7 +9,7 @@ import android.view.animation.Animation;
 import com.example.apple.sometestdemo.R;
 
 /**
- * Created by apple on 16/6/23.
+ * Created by zj on 16/6/23.
  * 启动页面
  */
 public class LaunchActivity extends BaseActivity {

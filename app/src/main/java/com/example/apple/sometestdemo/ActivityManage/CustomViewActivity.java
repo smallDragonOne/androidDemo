@@ -1,6 +1,7 @@
 package com.example.apple.sometestdemo.ActivityManage;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.apple.sometestdemo.R;
 import com.example.apple.sometestdemo.View.MyCustomView;

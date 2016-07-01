@@ -2,11 +2,13 @@ package com.example.apple.sometestdemo.ActivityManage;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ListView;
 
 import com.example.apple.sometestdemo.R;
 import com.example.apple.sometestdemo.Utils.MyAdapter;
+import com.example.apple.sometestdemo.Utils.Mylog;
 import com.example.apple.sometestdemo.Utils.ViewHolder;
 import com.example.apple.sometestdemo.View.NaveBarManger;
 
@@ -38,6 +40,15 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == event.KEYCODE_BACK){
+            ExitActivity.actionStart(this);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     /******************************初始化************************/
     /**
@@ -84,6 +95,26 @@ public class MainActivity extends BaseActivity {
                             }
                         });
                         break;
+                    case 2:
+                        holder.setClick(R.id.list_item, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(MainActivity.this , AnimationActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        holder.setClick(R.id.list_item, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(MainActivity.this,NetWorkLoadActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                        break;
                     default:
                         break;
 
@@ -101,4 +132,5 @@ public class MainActivity extends BaseActivity {
             datas.add(mainBean);
         }
     }
+
 }

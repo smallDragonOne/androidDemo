@@ -14,6 +14,10 @@ public class SharePrefeceHandle {
 
 
     /**
+     * 持久化文件名
+     */
+    private static final String[] prefeceName= {"sharePreferece"};
+    /**
      * 存入值
      * @param activity
      * @param str     持久化文件名
@@ -41,6 +45,11 @@ public class SharePrefeceHandle {
     public static SharedPreferences getPreferences(Activity activity , String str){
         SharedPreferences preferences = activity.getSharedPreferences(str, Context.MODE_PRIVATE);
         return preferences;
+    }
+
+
+    public static String[] getPreferecName(){
+        return prefeceName;
     }
 
 }

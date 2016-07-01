@@ -77,11 +77,11 @@ public class SharePrefereceStore extends BaseActivity implements View.OnClickLis
         switch (v.getId()){
             case R.id.goBtn:
                 HashMap<String,String> map = new HashMap<>();
-                map.put("storeIn",editText.getText().toString().trim());
-                SharePrefeceHandle.SetSharePrefeceHandle(this, "sharePreferece", map);
+                map.put("storeIn", editText.getText().toString().trim());
+                SharePrefeceHandle.SetSharePrefeceHandle(this, SharePrefeceHandle.getPreferecName()[0], map);
                 break;
             case R.id.outBtn:
-                SharedPreferences preferences = SharePrefeceHandle.getPreferences(this,"sharePreferece");
+                SharedPreferences preferences = SharePrefeceHandle.getPreferences(this,SharePrefeceHandle.getPreferecName()[0]);
                 tv_outnum.setText(preferences.getString("storeIn","null"));
                 break;
             default:

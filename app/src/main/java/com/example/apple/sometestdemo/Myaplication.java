@@ -3,6 +3,9 @@ package com.example.apple.sometestdemo;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.widget.Toast;
+
+import com.example.apple.sometestdemo.NetworkManage.NetworkStateManager;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,7 +27,7 @@ public class Myaplication extends Application {
     public void onCreate() {
         super.onCreate();
         myaplication = this;
-        /// 网络存在判断
+        NetworkStateManager.instance().init(this);
     }
 
     public Myaplication(){}

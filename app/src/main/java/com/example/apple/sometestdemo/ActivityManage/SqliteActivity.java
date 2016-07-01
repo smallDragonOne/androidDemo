@@ -63,6 +63,7 @@ public class SqliteActivity extends BaseActivity implements View.OnClickListener
             case R.id.entry_btn:
                 SQLiteDatabase db = dataBaseHandle.getWritableDatabase();
                 db.execSQL("insert into person(name ,age) values ('"+Ed_user.getText().toString().trim()+"','"+Ed_age.getText().toString().trim()+"')");
+                Toast.makeText(this,"存取信息成功", Toast.LENGTH_SHORT).show();
                 db.close();
                 break;
             case R.id.out_btn:

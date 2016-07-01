@@ -9,13 +9,13 @@
         android:id="@+id/nav_bar"/>
     <com.example.apple.sometestdemo.View.MyCustomView
         android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_height="70dp"
         android:layout_below="@id/nav_bar"
         android:layout_marginTop="10dp"
-        app:myText="name"
+        app:myText="镁铝"
         app:myTextColor="#ffffff"
         android:background="#ffffff"
-        app:myTextSize="30sp"
+        app:myTextSize="30dp"
         android:id="@+id/custom_view"
         android:layout_centerHorizontal="true"
         />
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
         android:background="#434523"
-        android:text="name"
+        android:text="gggnn"
         android:textSize="30dp"
         android:layout_below="@id/custom_view"
         android:layout_centerHorizontal="true"

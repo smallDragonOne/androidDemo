@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.apple.sometestdemo.NetworkManage.NetworkStateManager;
 import com.example.apple.sometestdemo.R;
+import com.example.apple.sometestdemo.Utils.Mylog;
 import com.example.apple.sometestdemo.View.NaveBarManger;
 
 import java.util.ArrayList;
@@ -37,6 +40,7 @@ public class DataStorgeActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
     }
 
 

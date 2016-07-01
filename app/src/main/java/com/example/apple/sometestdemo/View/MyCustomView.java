@@ -111,6 +111,7 @@ public class MyCustomView extends View {
         canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), myPaint);
 
         myPaint.setColor(myTextColor);
+
         //canvas.drawText(myText, (getWidth() - mBound.width()) / 2, (getHeight() - mBound.height()) / 2, myPaint);
 
         canvas.drawText(myText, (getWidth() - mBound.width()) / 2, getHeight() / 2 + mBound.height() / 2, myPaint);

@@ -6,8 +6,16 @@
         android:icon="@mipmap/app_icon"
         android:supportsRtl="true"
         android:name=".Myaplication"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ActivityManage.LaunchActivity"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".BroadcastManage.NetworkBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ActivityManage.ExitActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -15,9 +23,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ActivityManage.LaunchActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".ActivityManage.MainActivity"
             android:screenOrientation="portrait">
-
         </activity>
         <activity android:name=".ActivityManage.secondActivity"
             android:screenOrientation="portrait"/>
@@ -33,6 +43,24 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ActivityManage.CustomViewActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.BtnStateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.AnimationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.AlphaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.SacleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.TranslateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.RoateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.NetWorkLoadActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.GetRequestActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityManage.PostRequestActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 
@@ -40,4 +68,9 @@
         <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
         <!-- 往SDCard中写入数据的权限 -->
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        <!--网络访问权限-->
+        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+        <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

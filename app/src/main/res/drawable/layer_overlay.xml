@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+ <item
+     android:id="@+id/pic_layer_bg"
+     android:drawable="@drawable/pic_photo_icon"
+     />
+    <item android:id="@+id/panda_layer"
+        android:drawable="@drawable/panda"
+        android:top="30dp"
+        android:left="30dp"
+        android:right="30dp"
+        android:bottom="30dp"
+        />
+
+</layer-list>
